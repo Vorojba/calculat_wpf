@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="492.916" Width="280.109">
-    <Grid Background="#FF020202">
-        <Button Content="   0" HorizontalAlignment="Left" Margin="10,394,0,0" VerticalAlignment="Top" Width="122" Height="60" FontSize="24" Background="#FF1F1F1F" HorizontalContentAlignment="Left" FontFamily="Segoe UI Emoji" x:Name="zero">
+        Title="MainWindow" Height="492.916" Width="280.109" WindowStyle="None">
+    <Grid  x:Name="MainRoot" Background="#FF020202">
+        <TextBlock  Foreground="White" HorizontalAlignment="Left" Margin="0,52,0,0" Width="272" FontFamily="Segoe UI Symbol" FontSize="48" Height="67" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="textLabel"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="10,394,0,0" VerticalAlignment="Top" Width="122" Height="60" FontSize="24" Background="#FF1F1F1F" HorizontalContentAlignment="Center" FontFamily="Segoe UI Emoji" x:Name="zero">
             <Button.Template>
 
                 <ControlTemplate TargetType="Button">
@@ -21,24 +22,24 @@
 
             </Button.Template>
         </Button>
-        <Button Content="," HorizontalAlignment="Left" Margin="137,394,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Comma" Click="Comma_Click"/>
-        <Button Content="=" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Equals" Click="Equals_Click"/>
-        <Button Content="1" HorizontalAlignment="Left" Margin="7,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="One" Click="One_Click"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="72,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Two" Click="Two_Click"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="137,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Three" Click="Three_Click"/>
-        <Button Content="+" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Add" Click="Add_Click"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="7,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Four" Click="Four_Click"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="72,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Five" Click="Five_Click"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="137,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Six" Click="Six_Click"/>
-        <Button Content="-" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Minus" Click="Minus_Click"/>
-        <Button Content="7" HorizontalAlignment="Left" Margin="7,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Seven" Click="Seven_Click"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="72,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Eight" Click="Eight_Click"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="137,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Nine" Click="Nine_Click"/>
-        <Button Content="×" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Multiply" Click="Multiply_Click"/>
-        <Button Content="AC" HorizontalAlignment="Left" Margin="7,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" FontFamily="Consolas" Background="#FFA8ADB4" Foreground="Black" x:Name="Erase" Click="Erase_Click"/>
-        <Button Content="+/-" Foreground="Black" HorizontalAlignment="Left" Margin="72,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" FontFamily="Segoe UI Emoji" Background="#FFA8ADB4" x:Name="Sign" Click="Sign_Click"/>
-        <Button Content="%" Foreground="Black" HorizontalAlignment="Left" Margin="137,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" FontFamily="Segoe UI Emoji" Background="#FFA8ADB4" x:Name="Percent" Click="Percent_Click"/>
-        <Button Content="÷" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Division" Click="Division_Click"/>
-        <Label Content="25" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" FontFamily="Segoe UI Symbol" FontSize="48" HorizontalContentAlignment="Right" Margin="0,52,0,0" Height="67" x:Name="textHistory"/>
+        <Button Content="," HorizontalAlignment="Left" Margin="137,394,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Comma" />
+        <Button Content="=" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Equals" />
+        <Button Content="1" HorizontalAlignment="Left" Margin="7,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="One" />
+        <Button Content="2" HorizontalAlignment="Left" Margin="72,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Two" />
+        <Button Content="3" HorizontalAlignment="Left" Margin="137,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Three" />
+        <Button Content="+" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,329,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Add" />
+        <Button Content="4" HorizontalAlignment="Left" Margin="7,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Four" />
+        <Button Content="5" HorizontalAlignment="Left" Margin="72,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Five" />
+        <Button Content="6" HorizontalAlignment="Left" Margin="137,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Six" />
+        <Button Content="-" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,264,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Minus" />
+        <Button Content="7" HorizontalAlignment="Left" Margin="7,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Seven" />
+        <Button Content="8" HorizontalAlignment="Left" Margin="72,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Eight" />
+        <Button Content="9" HorizontalAlignment="Left" Margin="137,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" Background="#FF1F1F1F" FontFamily="Segoe UI Emoji" x:Name="Nine" />
+        <Button Content="×" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,199,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Multiply" />
+        <Button Content="AC" HorizontalAlignment="Left" Margin="7,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" FontFamily="Consolas" Background="#FFA8ADB4" Foreground="Black" x:Name="Erase" />
+        <Button Content="+/-" Foreground="Black" HorizontalAlignment="Left" Margin="72,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" FontFamily="Segoe UI Emoji" Background="#FFA8ADB4" x:Name="Sign" />
+        <Button Content="%" Foreground="Black" HorizontalAlignment="Left" Margin="137,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="24" FontFamily="Segoe UI Emoji" Background="#FFA8ADB4" x:Name="Percent" />
+        <Button Content="÷" VerticalContentAlignment="Top" HorizontalAlignment="Left" Margin="202,134,0,0" VerticalAlignment="Top" Width="60" Height="60" FontSize="36" Background="#FFDA731D" FontFamily="Segoe UI Emoji" x:Name="Division"/>
+        
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,95 +24,24 @@ namespace WpfApp4
         public MainWindow()
         {
             InitializeComponent();
+            foreach (UIElement el in MainRoot.Children)
+            {
+                if (el is Button)
+                    ((Button)el).Click += Button_CLick;
+            }
         }
-        
-        private void Comma_Click(object sender, RoutedEventArgs e)
+        private void Button_CLick(object sender, RoutedEventArgs e)
         {
-            
-        }
-
-        private void Equals_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void One_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Two_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Three_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Four_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Five_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Six_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Minus_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Seven_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Eight_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Nine_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Multiply_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Erase_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Sign_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Percent_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Division_Click(object sender, RoutedEventArgs e)
-        {
+            string str = (string)((Button)e.OriginalSource).Content;
+            if (str == "AC")
+                textLabel.Text = "";
+            else if(str == "=")
+            {
+                string value = new DataTable().Compute(textLabel.Text,null).ToString();
+                textLabel.Text = value;
+            }
+            else
+            textLabel.Text += str;
 
         }
 
